@@ -4,7 +4,8 @@
   "description": "back-end proyecto 1 moviles",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "index.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,12 @@
   "bugs": {
     "url": "https://github.com/robertox186/FormularioApp-back/issues"
   },
-  "homepage": "https://github.com/robertox186/FormularioApp-back#readme"
+  "homepage": "https://github.com/robertox186/FormularioApp-back#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.5.1"
+  }
 }

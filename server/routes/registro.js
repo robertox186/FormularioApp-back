@@ -11,8 +11,8 @@ app.post('/', function (req, res) {
     let info=req.body;
     console.log(info);
     
-    info.password=bcrypt.hashSync(info.password,10);
-    console.log(info.password)
+    info.contraseña=bcrypt.hashSync(info.contraseña,10);
+    console.log(info.contraseña)
     user.createUser(info).then(resp=>{
      let respt=resp.rows;
 

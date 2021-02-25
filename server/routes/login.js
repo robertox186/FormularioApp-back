@@ -9,11 +9,11 @@ app.post('/', function (req, res) {
    user.login(info).then(respt=>{
      let resp=respt.rows;
 
-     if(bcrypt.compareSync(info.password,resp[0].password)){
+     if(bcrypt.compareSync(info.contraseña,resp[0].contraseña)){
        res.send({status:200,body:resp[0]});
 
      }else{
-       res.send({status:400,message:"usuario u/o contrasena incorrectos"})
+       res.send({status:400,message:"usuario u/o contraseña incorrectos"})
      }
 
    })

@@ -9,7 +9,7 @@ module.exports.createUser= async (info)=>{
     console.log("prop "+prop)
     console.log("client "+client);
     
-var h=await  client.query(prop.insertUser,[info.names,info.email,info.password,info.edad,JSON.stringify([])]);
+var h=await  client.query(prop.insertUser,[info.username,info.email,info.contraseña,info.genero,info.edad]);
 client.end(); 
 return h;
      
@@ -20,7 +20,7 @@ module.exports.login= async (info)=>{
     const client = new Client(prop.con)
     client.connect()
    
-       var h=await client.query(prop.login,[info.correo])
+       var h=await client.query(prop.login,[info.email])
        client.end();
 return h;
 
