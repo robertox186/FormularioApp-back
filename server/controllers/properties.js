@@ -10,11 +10,17 @@ module.exports={
         password: 'Daniela21',
         port: 5432,
       },
-    select:"select (informacion) from users where email=$1",
+   updateUser:"update usuario set username=$1,email=$2,genero=$3,edad=$4",
     
     insertMenu:"insert into menu (titulo,parent_menu) values ($1,$2) returning *",
 
     select_all_menu:"select * from menu",
     
-     delete_menu:"delete from meno where id_menu=$1"
+     delete_menu:"delete from meno where id_menu=$1",
+     insertForm:"insert into formulario (title,descripcion,id_menu) values ($1,$2,$3)",
+
+     selectForm:"select  * from formulario where id_formulario=$1",
+
+     deleteForm:"delete from formulario where id_formulario=$1"
+
     }
