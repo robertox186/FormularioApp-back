@@ -10,6 +10,11 @@ module.exports={
         password: 'Daniela21',
         port: 5432,
       },
-    select:"select (informacion) from users where email=$1"
+    select:"select (informacion) from users where email=$1",
     
+    insertMenu:"insert into menu (titulo,parent_menu) values ($1,$2) returning *",
+
+    select_all_menu:"select * from menu",
+    
+     delete_menu:"delete from meno where id_menu=$1"
     }
