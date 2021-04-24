@@ -3,7 +3,7 @@ const { Client } = require('pg')
 const   prop=require('../controllers/properties');
 
 module.exports.createUser= async (info)=>{
-    const client = new Client(prop.con)
+    const client = new Client({connectionString:"postgres://esvlqmxr:ShL33mmvfoTZHNr7qRtY55xlkWKxvC8f@queenie.db.elephantsql.com:5432/esvlqmxr"})
     console.log(prop.con)
     client.connect()
     console.log("prop "+prop)
@@ -17,7 +17,7 @@ return h;
 }
 module.exports.login= async (info)=>{
     console.log(prop.con)
-    const client = new Client(prop.con)
+    const client = new Client({connectionString:"postgres://esvlqmxr:ShL33mmvfoTZHNr7qRtY55xlkWKxvC8f@queenie.db.elephantsql.com:5432/esvlqmxr"})
     client.connect()
    
        var h=await client.query(prop.login,[info.email])
@@ -37,7 +37,7 @@ client.end();
 
 }
 module.exports.select= async (info)=>{
-    const client = new Client(prop.con)
+    const client = new Client({connectionString:"postgres://esvlqmxr:ShL33mmvfoTZHNr7qRtY55xlkWKxvC8f@queenie.db.elephantsql.com:5432/esvlqmxr"})
     client.connect()
     console.log("prop "+prop)
     console.log("client "+client);
