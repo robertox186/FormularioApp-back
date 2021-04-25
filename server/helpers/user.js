@@ -30,7 +30,7 @@ module.exports.update= async (info)=>{
     client.connect()
     console.log("prop "+prop)
     console.log("client "+client);
-    var h=await  client.query(prop.update,[info.informacion,info.email])
+    var h=await  client.query(prop.updateUser,[info.username,info.email,info.genero,info.edad])
 client.end();
    return h
      
