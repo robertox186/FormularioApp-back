@@ -23,7 +23,7 @@ app.get('/',function(req,res){
     let info=req.body;
     console.log(info)
   menu.selectAllMenu()
-.then(resp=>{
+.then(respt=>{
 
 
     let resp=respt.rows;
@@ -47,7 +47,7 @@ app.delete('/',function(req,res){
     let info=req.body;
     console.log(info)
   menu.deleteMenu(info)
-.then(resp=>{
+.then(respt=>{
 
 
     let resp=respt.rows;
