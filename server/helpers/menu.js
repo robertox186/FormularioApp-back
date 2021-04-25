@@ -16,11 +16,11 @@ return h;
 
 }
 module.exports.selectAllMenu= async ()=>{
-    console.log(prop.con)
+ 
     const client = new Client({connectionString:"postgres://esvlqmxr:ShL33mmvfoTZHNr7qRtY55xlkWKxvC8f@queenie.db.elephantsql.com:5432/esvlqmxr"})
     client.connect()
    
-       var h=await client.query(prop.select_all_menu)
+       var h=await client.query(prop.select_all_menu,[])
        client.end();
 return h;
 
