@@ -11,7 +11,11 @@ app.use(require('./server/routes/index'));
 
 process.env.PORT = process.env.PORT || 3000;
 
+app.get('/',function(req,res){
+console.log("hola")
+res.send(200);
 
+})
 process.env.NODE_ENV = process.env.NODE_ENV || 3000;
 app.listen(process.env.PORT, ()=> {
     console.log("Escuchando en puerto 3000");
